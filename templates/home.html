@@ -1,3 +1,13 @@
-<h2>HOME TEMPLATE</h2>
+{% extends 'main.html' %}
 
+{% block Give_body %}
+<h2>HOME TEMPLATE</h2>
+<div>
+    {% for d in Details %}
+    <div>
+        {{d.id}}->{{d.name}}
+    </div>
+    {% endfor%}
+</div>
 <a href="{% url 'room' %}">Go to room page</a>
+{% endblock %}

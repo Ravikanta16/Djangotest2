@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block Give_body %}
+<h2>HOME1 TEMPLATE</h2>
+<div>
+    {% for d in Details %}
+    <div>
+        <!--{{d.id}}->{{d.name}}-->
+        <!--{{d.id}}-> <a href="/intro/room/{{d.id}}">{{d.name}}</a>-->
+        {{d.id}}-> <a href="{% url 'room' d.id %}">{{d.name}}
+        <!--<a href="/intro/room/{{d.id}}">{{d.id}}->{{d.name}}</a>-->
+    </div>
+    {% endfor%}
+</div>
+{% endblock %}
